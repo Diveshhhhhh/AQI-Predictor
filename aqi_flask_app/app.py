@@ -1,9 +1,19 @@
 from flask import Flask, render_template, request
 import numpy as np
 import joblib
+import os
+import gdown  # Make sure to run: pip install gdown
 
 app = Flask(__name__)
-model = joblib.load('aqi_flask_app/model/modelrf.pkl')  # Replace with your actual model filename
+
+# === Download model from Google Drive if not present ===
+model_path = "aqi_flask_app/model/modelrf.pkl"
+if not os.path.exists(model_path):
+    os.makedirs(os.path.dirname(model_path), exist_ok=True)
+    gdown.download('https://drive.google.com/uc?id=1Gct-g5W7wvpyesrFSDQ5d32jkYPAw3_t', model_path, quiet=False)
+
+# === Load the model ===
+model = joblib.load(model_path)
 
 # Features your model uses
 features = ['PM2.5', 'PM10', 'NO', 'NO2', 'NOx', 'NH3', 'CO', 'SO2', 'O3']

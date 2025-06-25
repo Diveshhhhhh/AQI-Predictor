@@ -3,17 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>AQI Predictor</title>
-
-    <!-- Link the external stylesheet -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <!-- Main content centered in page -->
     <main class="main-content">
         <div class="card">
             <h1>Air Quality Index (AQI) Predictor</h1>
-
-            <!-- Form -->
             <form method="post">
                 <div class="grid">
                     {% for field in ['PM2.5', 'PM10', 'NO', 'NO2', 'NOx', 'NH3', 'CO', 'SO2', 'O3'] %}
@@ -37,8 +32,6 @@
             {% endif %}
         </div>
     </main>
-
-    <!-- Footer -->
     <footer class="contact-section">
         <h3>Contact Me</h3>
         <div class="contact-links">
@@ -53,8 +46,6 @@
             </a>
         </div>
     </footer>
-
-    <!-- JS -->
     <script src="{{ url_for('static', filename='app.js') }}"></script>
 </body>
 

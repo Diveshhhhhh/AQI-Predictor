@@ -1,4 +1,3 @@
-// Fills the form with one of several predefined sample sets
 function fillExample() {
     const samples = [
     [25, 50, 15, 18, 22, 12, 0.5, 5, 20],

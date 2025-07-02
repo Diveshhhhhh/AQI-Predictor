@@ -8,7 +8,7 @@ app = Flask(__name__)
 model_path = "aqi_flask_app/model/random_forest_model.pkl"
 if not os.path.exists(model_path):
     os.makedirs(os.path.dirname(model_path), exist_ok=True)
-    gdown.download('https://drive.google.com/uc?id=1j9IaJQ0uOppCane1n1SOE_EOrBD4bShK', model_path, quiet=False)
+    gdown.download('https://drive.google.com/file/d/1M-JzFwzVUhLjO_ZyRSMNi8FpN3CYGztx/view?usp=sharing', model_path, quiet=False)
 
 model = joblib.load(model_path)
 features = ['PM2.5', 'PM10', 'NO', 'NO2', 'NOx', 'NH3', 'CO', 'SO2', 'O3']

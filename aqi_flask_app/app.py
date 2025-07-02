@@ -3,7 +3,9 @@ import numpy as np
 import joblib
 import os
 import gdown
-
+import os
+port = int(os.environ.get("PORT", 5000))
+app.run(host='0.0.0.0', port=port) 
 app = Flask(__name__)
 model_path = "aqi_flask_app/model/random_forest_model.pkl"
 if not os.path.exists(model_path):

@@ -1,0 +1,9 @@
+setuptools>=42
+wheel
+Flask
+scikit-learn==1.3.2
+pandas
+numpy
+joblib
+gdown
+requests

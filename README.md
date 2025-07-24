@@ -2,8 +2,8 @@
 
 This project is a web application built using **Flask** and **Random Forest Regressor** that predicts the **Air Quality Index (AQI)** based on various air pollutant parameters.
 
-🚀 Deployed Live: [Visit App](https://aqi-predictor-pqmh.onrender.com)
-📊 Dataset Source: [https://www.kaggle.com/datasets/rohanrao/air-quality-data-in-india]
+> 🚀 Deployed Live: [Visit App](https://aqi-predictor-pqmh.onrender.com)
+> 📊 Dataset Source: [https://www.kaggle.com/datasets/rohanrao/air-quality-data-in-india]
 ---
 
 ## 🧠 Features
